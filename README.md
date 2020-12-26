@@ -24,3 +24,31 @@ There's two types of packages, reusable and executable. The former is great for 
 ### How about `func main()`?
 
 Remember C++? Same thing, the "root" function's name is `main`.
+
+## Variables
+
+### Variable Declarations
+
+Two ways:
+
+1. `var card string = "Queen of Hearts"`
+2. `card := "Queen of Hearts"`
+
+### Arrays/Slices
+
+In JS/TS we're typically accustomed to seeing `slice` as an `array` function with `arrays` themselves as being resizable. In Go, `Arrays` are fixed in size and type, while `Slices` are arrays that are dynamic in size but still fixed in type.
+
+Note, the `append` function for slices doesn't modify the original `slice`, it returns a new one.
+
+### for loops
+
+```go
+  for i, card := range cards {
+		fmt.Println(i, card)
+	}
+```
+
+- `i` is the index of the element in the array we're currently on
+- `card` is the current item in the slice/array we're iterating over
+- `range cards` says to take the slice of `cards` and loop over it
+- code inside the `{}` is just code that runs over each iteration of the loop
